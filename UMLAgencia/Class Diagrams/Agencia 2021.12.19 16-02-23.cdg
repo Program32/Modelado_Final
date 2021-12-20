@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Agencia">
+  <ClassDiagramComponents>
+    <Class name="Agencia" package="CapaNegocio" visibility="public" xPosition="651.0" yPosition="27.0">
+      <Fields>
+        <Field name="nombres" type="String" visibility="private"/>
+        <Field name="direccion" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getNombres" returnType="String" visibility="public"/>
+        <Method name="setNombres" returnType="void" visibility="public">
+          <Argument type="String" name="nombres"/>
+        </Method>
+        <Method name="getDireccion" returnType="String" visibility="public"/>
+        <Method name="setDireccion" returnType="void" visibility="public">
+          <Argument type="String" name="direccion"/>
+        </Method>
+        <Method name="Dirigir" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Deposito" package="CapaNegocio" visibility="public" xPosition="1244.0" yPosition="1138.0">
+      <Fields>
+        <Field name="nroCuenta" type="String" visibility="private"/>
+        <Field name="necesita" type="SistemaPago" visibility="public"/>
+        <Field name="facturas" type="Facturas" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getNroCuenta" returnType="String" visibility="public"/>
+        <Method name="setNroCuenta" returnType="void" visibility="public">
+          <Argument type="String" name="nroCuenta"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Economicos" package="CapaNegocio" visibility="public" xPosition="235.0" yPosition="1473.0">
+      <Fields>
+        <Field name="beneficios" type="String" visibility="private"/>
+        <Field name="solicita" type="Paquetes" visibility="public"/>
+        <Field name="necesita" type="Requerimiento" visibility="public"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getBeneficios" returnType="String" visibility="public"/>
+        <Method name="setBeneficios" returnType="void" visibility="public">
+          <Argument type="String" name="beneficios"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Estandar" package="CapaNegocio" visibility="public" xPosition="638.0" yPosition="1473.0">
+      <Fields>
+        <Field name="beneficios" type="String" visibility="private"/>
+        <Field name="forma" type="Paquetes" visibility="public"/>
+        <Field name="hace" type="Requerimiento" visibility="public"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getBeneficios" returnType="String" visibility="public"/>
+        <Method name="setBeneficios" returnType="void" visibility="public">
+          <Argument type="String" name="beneficios"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Estrellas" package="CapaNegocio" visibility="public" xPosition="364.0" yPosition="2306.0">
+      <Fields>
+        <Field name="precio" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getPrecio" returnType="String" visibility="public"/>
+        <Method name="setPrecio" returnType="void" visibility="public">
+          <Argument type="String" name="precio"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Facturas" package="CapaNegocio" visibility="public" xPosition="1692.0" yPosition="1069.0">
+      <Fields>
+        <Field name="nroRuc" type="String" visibility="private"/>
+        <Field name="subTotal" type="Currency" visibility="private"/>
+        <Field name="igv" type="Currency" visibility="private"/>
+        <Field name="fechaCancelacion" type="Date" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getNroRuc" returnType="String" visibility="public"/>
+        <Method name="setNroRuc" returnType="void" visibility="public">
+          <Argument type="String" name="nroRuc"/>
+        </Method>
+        <Method name="getSubTotal" returnType="Currency" visibility="public"/>
+        <Method name="setSubTotal" returnType="void" visibility="public">
+          <Argument type="Currency" name="subTotal"/>
+        </Method>
+        <Method name="getIgv" returnType="Currency" visibility="public"/>
+        <Method name="setIgv" returnType="void" visibility="public">
+          <Argument type="Currency" name="igv"/>
+        </Method>
+        <Method name="getFechaCancelacion" returnType="Date" visibility="public"/>
+        <Method name="setFechaCancelacion" returnType="void" visibility="public">
+          <Argument type="Date" name="fechaCancelacion"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Hotel" package="CapaNegocio" visibility="public" xPosition="348.0" yPosition="2016.0">
+      <Fields>
+        <Field name="direccion" type="String" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="usa" type="Requerimiento" visibility="public"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getDireccion" returnType="String" visibility="public"/>
+        <Method name="setDireccion" returnType="void" visibility="public">
+          <Argument type="String" name="direccion"/>
+        </Method>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Paquetes" package="CapaNegocio" visibility="public" xPosition="660.0" yPosition="1101.0">
+      <Fields>
+        <Field name="precio" type="String" visibility="private"/>
+        <Field name="hechos" type="Proveedores" visibility="public"/>
+        <Field name="pide" type="ArrayList&lt;Economicos&gt;" visibility="public"/>
+        <Field name="precisa" type="ArrayList&lt;Estandar&gt;" visibility="public"/>
+        <Field name="requiere" type="ArrayList&lt;Plus&gt;" visibility="public"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getPrecio" returnType="String" visibility="public"/>
+        <Method name="setPrecio" returnType="void" visibility="public">
+          <Argument type="String" name="precio"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Plus" package="CapaNegocio" visibility="public" xPosition="1075.0" yPosition="1473.0">
+      <Fields>
+        <Field name="beneficios" type="String" visibility="private"/>
+        <Field name="solicita" type="Paquetes" visibility="public"/>
+        <Field name="requiere" type="Requerimiento" visibility="public"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getBeneficios" returnType="String" visibility="public"/>
+        <Method name="setBeneficios" returnType="void" visibility="public">
+          <Argument type="String" name="beneficios"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Proveedores" package="CapaNegocio" visibility="public" xPosition="653.0" yPosition="774.0">
+      <Fields>
+        <Field name="efectuada" type="Reserva" visibility="public"/>
+        <Field name="sistemaPago" type="SistemaPago" visibility="public"/>
+        <Field name="concreta" type="ArrayList&lt;Paquetes&gt;" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="Otorgar" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Requerimiento" package="CapaNegocio" visibility="public" xPosition="659.0" yPosition="1761.0">
+      <Fields>
+        <Field name="desempena" type="Economicos" visibility="public"/>
+        <Field name="elabora" type="Estandar" visibility="public"/>
+        <Field name="obra" type="Plus" visibility="public"/>
+        <Field name="dispone" type="Hotel" visibility="public"/>
+        <Field name="coloca" type="Restaurante" visibility="public"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Reserva" package="CapaNegocio" visibility="public" xPosition="650.0" yPosition="555.0">
+      <Fields>
+        <Field name="establecidad" type="Trabajadores" visibility="public"/>
+        <Field name="ejecutada" type="ArrayList&lt;Proveedores&gt;" visibility="public"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Reservar" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Restaurante" package="CapaNegocio" visibility="public" xPosition="920.0" yPosition="2016.0">
+      <Fields>
+        <Field name="direccion" type="String" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="prevee" type="Requerimiento" visibility="public"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getDireccion" returnType="String" visibility="public"/>
+        <Method name="setDireccion" returnType="void" visibility="public">
+          <Argument type="String" name="direccion"/>
+        </Method>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="SistemaPago" package="CapaNegocio" visibility="public" xPosition="1246.0" yPosition="774.0">
+      <Fields>
+        <Field name="totalMonto" type="String" visibility="private"/>
+        <Field name="liquida" type="ArrayList&lt;Deposito&gt;" visibility="public"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getTotalMonto" returnType="String" visibility="public"/>
+        <Method name="setTotalMonto" returnType="void" visibility="public">
+          <Argument type="String" name="totalMonto"/>
+        </Method>
+        <Method name="Controlar" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Tenedores" package="CapaNegocio" visibility="public" xPosition="936.0" yPosition="2306.0">
+      <Fields>
+        <Field name="precio" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getPrecio" returnType="String" visibility="public"/>
+        <Method name="setPrecio" returnType="void" visibility="public">
+          <Argument type="String" name="precio"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Trabajadores" package="CapaNegocio" visibility="public" xPosition="664.0" yPosition="311.0">
+      <Fields>
+        <Field name="dni" type="String" visibility="private"/>
+        <Field name="realizado" type="ArrayList&lt;Reserva&gt;" visibility="public"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getDni" returnType="String" visibility="public"/>
+        <Method name="setDni" returnType="void" visibility="public">
+          <Argument type="String" name="dni"/>
+        </Method>
+        <Method name="Organizar" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="precisa" source="CapaNegocio.Paquetes" target="CapaNegocio.Estandar" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Estandar&gt;"/>
+    <HasRelation name="realizado" source="CapaNegocio.Trabajadores" target="CapaNegocio.Reserva" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Reserva&gt;"/>
+    <HasRelation name="desempena" source="CapaNegocio.Requerimiento" target="CapaNegocio.Economicos" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="hechos" source="CapaNegocio.Paquetes" target="CapaNegocio.Proveedores" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="usa" source="CapaNegocio.Hotel" target="CapaNegocio.Requerimiento" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="CapaNegocio.Trabajadores" target="CapaNegocio.Agencia"/>
+    <HasRelation name="hace" source="CapaNegocio.Estandar" target="CapaNegocio.Requerimiento" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="forma" source="CapaNegocio.Estandar" target="CapaNegocio.Paquetes" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="necesita" source="CapaNegocio.Economicos" target="CapaNegocio.Requerimiento" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="concreta" source="CapaNegocio.Proveedores" target="CapaNegocio.Paquetes" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Paquetes&gt;"/>
+    <HasRelation name="dispone" source="CapaNegocio.Requerimiento" target="CapaNegocio.Hotel" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="ejecutada" source="CapaNegocio.Reserva" target="CapaNegocio.Proveedores" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Proveedores&gt;"/>
+    <HasRelation name="pide" source="CapaNegocio.Paquetes" target="CapaNegocio.Economicos" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Economicos&gt;"/>
+    <HasRelation name="facturas" source="CapaNegocio.Deposito" target="CapaNegocio.Facturas" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="CapaNegocio.Tenedores" target="CapaNegocio.Restaurante"/>
+    <HasRelation name="liquida" source="CapaNegocio.SistemaPago" target="CapaNegocio.Deposito" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Deposito&gt;"/>
+    <HasRelation name="obra" source="CapaNegocio.Requerimiento" target="CapaNegocio.Plus" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="coloca" source="CapaNegocio.Requerimiento" target="CapaNegocio.Restaurante" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="elabora" source="CapaNegocio.Requerimiento" target="CapaNegocio.Estandar" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="solicita" source="CapaNegocio.Economicos" target="CapaNegocio.Paquetes" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="establecidad" source="CapaNegocio.Reserva" target="CapaNegocio.Trabajadores" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="necesita" source="CapaNegocio.Deposito" target="CapaNegocio.SistemaPago" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="efectuada" source="CapaNegocio.Proveedores" target="CapaNegocio.Reserva" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="" source="CapaNegocio.Proveedores" target="CapaNegocio.SistemaPago" type="Composition" sourceCardinality="0..1" targetCardinality="0..*" collectionType="List"/>
+    <HasRelation name="requiere" source="CapaNegocio.Plus" target="CapaNegocio.Requerimiento" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="solicita" source="CapaNegocio.Plus" target="CapaNegocio.Paquetes" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="prevee" source="CapaNegocio.Restaurante" target="CapaNegocio.Requerimiento" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="requiere" source="CapaNegocio.Paquetes" target="CapaNegocio.Plus" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Plus&gt;"/>
+    <IsRelation name="is" source="CapaNegocio.Estrellas" target="CapaNegocio.Hotel"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
